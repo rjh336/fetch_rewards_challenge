@@ -1,0 +1,35 @@
+Hello __,
+
+The analytics team is trying to understand how trends in brand purchases (captured in our receipts) 
+relate to user behavior. We seek to understand how brands rank in terms of spend and purchase volume 
+among certain cohorts of users. However, there are some issues with the cleanliness of the data logged 
+from our production database which will need resolution before we can draw any insights. 
+
+In order to resolve these issues, we need various stakeholders (from engineering and product) to help 
+answer the questions below. Can you please help put me in contact with the right stakeholders so we can 
+go over these questions?
+
+
+Questions for product managers:
+
+- What is the `CPG` for a brand? How does the app consume or produce a CPG entity? 
+  Can it be used to categorize brands?
+
+- How is line item metadata is inferred from scanned receipts? 
+  What is the process by which this happens and which data sources / 3rd parties are involved, if any?
+
+- Is your brands database the result of both identified brands from receipts and existing partnerships? 
+  Are there any other ways brands are acquired into the database?
+
+
+Questions for engineers:
+
+- How are brand entities loaded into the brands collection?
+
+- Do receipt line item entities have a data model? 
+  Where is this documented and how is it enforced before being sent to the receipts collection?
+
+- Why do receipt line items not have a reference to a unique brand id?
+
+- Why are there so many missing brand codes from the receipt line items?
+
